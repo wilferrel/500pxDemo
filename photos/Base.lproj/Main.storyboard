@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKN-M1-PwJ" userLabel="NavBar">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="500px_logoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="3uF-1a-LcI">
+                                        <rect key="frame" x="240" y="20" width="120" height="40"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3Sy-Qz-Z81"/>
+                                            <constraint firstAttribute="width" constant="120" id="h31-KI-Kih"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5oL-OI-Nzi"/>
+                                    <constraint firstItem="3uF-1a-LcI" firstAttribute="centerY" secondItem="AKN-M1-PwJ" secondAttribute="centerY" constant="5" id="Mlx-Ye-rmq"/>
+                                    <constraint firstItem="3uF-1a-LcI" firstAttribute="centerX" secondItem="AKN-M1-PwJ" secondAttribute="centerX" id="SpG-SM-KAu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5oL-OI-Nzi"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AiY-F3-Qbv">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="pHa-6e-tU2"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="oaI-ZZ-Z5l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="top" secondItem="AKN-M1-PwJ" secondAttribute="bottom" id="Aff-4y-lLa"/>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="BTS-8u-pm4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AiY-F3-Qbv" secondAttribute="trailing" constant="-20" id="NyS-Yt-sgu"/>
+                            <constraint firstAttribute="trailing" secondItem="AiY-F3-Qbv" secondAttribute="trailing" id="QRC-bH-6Td"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="AiY-F3-Qbv" secondAttribute="bottom" id="W6c-d7-6q4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="AiY-F3-Qbv" secondAttribute="bottom" id="bY0-YV-6x8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AKN-M1-PwJ" secondAttribute="trailing" constant="-20" id="bh8-xB-ZbA"/>
+                            <constraint firstItem="AKN-M1-PwJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="fxW-g0-XZf"/>
+                            <constraint firstItem="AKN-M1-PwJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="kNu-ae-XaV"/>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="kfJ-wd-tiK"/>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="ma4-n5-Lmh"/>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="top" secondItem="AKN-M1-PwJ" secondAttribute="bottom" id="mm1-yc-WcU"/>
+                            <constraint firstItem="AiY-F3-Qbv" firstAttribute="top" secondItem="AKN-M1-PwJ" secondAttribute="bottom" id="x4m-aX-6F0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Aff-4y-lLa"/>
+                                <exclude reference="NyS-Yt-sgu"/>
+                                <exclude reference="ma4-n5-Lmh"/>
+                                <exclude reference="x4m-aX-6F0"/>
+                                <exclude reference="bY0-YV-6x8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="navBarView" destination="AKN-M1-PwJ" id="ZkF-s6-DBh"/>
+                        <outlet property="photosFeedTable" destination="AiY-F3-Qbv" id="7F6-sh-HII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="203"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="500px_logoWhite" width="1100" height="600"/>
+    </resources>
+</document>
